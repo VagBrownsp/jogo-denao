@@ -78,3 +78,40 @@
 }
 
 }
+@media(max-width: 450px) {
+    .game-board {
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 450px) {
+    .pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+}
+@media(max-width: 450px) {
+    .pipe {
+    position: absolute;
+    bottom: 0;
+    width: 95px;
+    animation: pipe-animation 2s infinite linear;
+}
+}
+@media(max-width: 450px) {
+    .mario {
+        width: 85px;
+        position: absolute;
+        bottom: 0;
+
+    }
+}
+@media(max-width: 450px) {
+.clouds {
+    width: 350px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+
+}
+}
