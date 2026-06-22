@@ -1,36 +1,22 @@
-const mario = document.querySelector(".mario")
-const pipe = document.querySelector(".pipe")
+document.getElementById("formFicha").addEventListener("submit", function(e) {
 
-const jump = () =>  {
-    mario.classList.add("jump")
-    setTimeout(() => {
-        mario.classList.remove("jump")
-    }, 500) 
+    e.preventDefault();
 
-}
+    const nome = document.getElementById("nome").value;
+    const dataNascimento = document.getElementById("dataNascimento").value;
+    const celular = document.getElementById("celular").value;
 
-const loop = setInterval(() => {
+    const mensagem =
+`🎁 LISTA PARA SORTEIO - VALE FINANCEIRA
 
-    const pipePosition = pipe.offsetLeft
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "")
+Nome: ${nome}
+Data de Nascimento: ${dataNascimento}
+Celular: ${celular}`;
 
-    if (pipePosition <= 40 && pipePosition > 0 && marioPosition < 40) {
+    const url =
+        "https://api.whatsapp.com/send?phone=5512997479192&text=" +
+        encodeURIComponent(mensagem);
 
-        pipe.style.animation = "none"
-        pipe.style.left = `${pipePosition}px`
+    window.location.href = url;
 
-        mario.style.animation = "none" 
-        mario.style.bottom = `${pipePosition}px`
-
-        mario.src = "./img/game-over.png"
-        mario.style.width = "60px"
-        mario.style.marginLeft = "50px"
-
-        clearInterval(loop)
-
-    }
-}, 10) 
-
-
-
-document.addEventListener("keydown", jump)
+});
