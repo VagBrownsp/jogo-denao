@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar do Denão</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js" defer></script>
-    <link rel="shortcut icon" href="/img/Imagem do WhatsApp de 2024-05-21 à(s) 23.32.51_a0361bb3.png" >
+    <title>Lista para Sorteio - Vale Financeira</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
 
-<div class="game-board">
-    <img class="pipe" src="/img/png-transparent-sign-wood-billboard-s-angle-white-text-removebg-preview.png" alt="tubo">
-    <img class="mario" src="/img/202405212326-unscreen.gif" alt="">
-    <img class="clouds" src="/img/clouds.png" alt="">
-</div>
+    <div class="container">
+
+        <h1>Lista para Sorteio Vale Financeira</h1>
+
+        <form id="formFicha">
+
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" required>
+
+            <label for="dataNascimento">Data de Nascimento *</label>
+            <input type="date" id="dataNascimento" required>
+
+            <label for="celular">Celular *</label>
+            <input type="tel" id="celular" required>
+
+            <button type="submit">Participar</button>
+
+        </form>
+
+    </div>
 
 </body>
 </html>
